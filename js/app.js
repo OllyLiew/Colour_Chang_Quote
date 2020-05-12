@@ -33,12 +33,17 @@
   ];
 
   const btn = document.getElementById("generate-btn");
+  const body = document.querySelector('body')
 
   btn.addEventListener("click", function() {
     let random = Math.floor(Math.random() * quotes.length);
     console.log(random);
+    body.style.backgroundColor = '#' + Math.floor(Math.random() * 16).toString(16) + Math.floor(Math.random() * 16).toString(16) + Math.floor(Math.random() * 16).toString(16)
 
+  
     document.getElementById("quote").textContent = quotes[random].quote;
     document.querySelector(".author").textContent = quotes[random].author;
   });
 })();
+
+
